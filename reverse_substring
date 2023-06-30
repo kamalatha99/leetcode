@@ -1,0 +1,31 @@
+import java.util.*;
+public class reverse_substring {
+	    //Function to reverse every sub-array group of size k.
+	    static void reverseInGroups(ArrayList<Integer> arr, int n, int k) {
+	        // code here
+	       int pre=k-1;
+	       for(int i=pre;i>=0;i--)
+	       {
+	           System.out.print(arr.get(i)+" ");
+	       }
+	       for(int j=k;j<n;j++)
+	       {
+	           System.out.print(arr.get(j)+" ");
+	       }
+	    }
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner obj=new Scanner(System.in);
+		int n=obj.nextInt();
+		int k=obj.nextInt();
+		ArrayList<Integer> arr=new ArrayList<Integer>(n);
+		for(int i=0;i<n;i++)
+		{
+			arr.add(obj.nextInt());
+		}
+		reverseInGroups(arr,n,k);
+		
+
+	}
+
+}
